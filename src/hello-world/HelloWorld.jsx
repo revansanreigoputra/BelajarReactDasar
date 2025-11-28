@@ -33,16 +33,38 @@ export default function HelloWorld() {
 
 
 // Javascript di JSX
+// function HeaderHelloWorld() {
+//     const text = "Hello World";
+//     return (
+//         <h1>{text.toUpperCase()}</h1>
+//     )
+// }
+
+// function ParagraphHelloWorld() {
+//     const text = "Welcome to my first React component!";
+//     return (
+//         <p>{text.toLowerCase()}</p>
+//     )
+// }
+
+// Kurung kurawal double {{}} di JSX
 function HeaderHelloWorld() {
     const text = "Hello World";
     return (
-        <h1>{text.toUpperCase()}</h1>
+        <h1 style={{
+            color: "blue",
+            backgroundColor: "yellow"
+        }}>{text.toUpperCase()}</h1>
     )
 }
 
 function ParagraphHelloWorld() {
     const text = "Welcome to my first React component!";
+    const style = {
+        color: "green",
+        backgroundColor: "lightgray"
+    };
     return (
-        <p>{text.toLowerCase()}</p>
+        <p style={style}>{text.toLowerCase()}</p>
     )
 }
