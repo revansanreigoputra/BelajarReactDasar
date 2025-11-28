@@ -1,8 +1,10 @@
-// multiple components in one file / pemecahan function
 export default function HelloWorld() {
+    const props = {
+        text: "Hello World from Spread Sytnax!"
+    };
     return (
         <div>
-            <HeaderHelloWorld text="Hello World!" />
+            <HeaderHelloWorld {...props} />
             <ParagraphHelloWorld />
         </div>
     );
