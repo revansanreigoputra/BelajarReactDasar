@@ -19,15 +19,30 @@ export default function HelloWorld() {
     );
 }
 
+// function HeaderHelloWorld() {
+//     return (
+//         <h1>Hello World</h1>
+//     )
+// }
 
+// function ParagraphHelloWorld() {
+//     return (
+//         <p>Welcome to my first React component!</p>
+//     )
+// }
+
+
+// Javascript di JSX
 function HeaderHelloWorld() {
+    const text = "Hello World";
     return (
-        <h1>Hello World</h1>
+        <h1>{text.toUpperCase()}</h1>
     )
 }
 
 function ParagraphHelloWorld() {
+    const text = "Welcome to my first React component!";
     return (
-        <p>Welcome to my first React component!</p>
+        <p>{text.toLowerCase()}</p>
     )
 }
