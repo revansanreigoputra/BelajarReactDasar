@@ -10,10 +10,11 @@ export default function Table() {
                 </tr>
             </thead>
             <tbody>
-                <Row text="Baris Pertama" />
-                <Row text="Baris Kedua" />
-                <Row text="Baris Ketiga" />
+                <Row id="1" text="Baris Pertama" />
+                <Row id="1" text="Baris Pertama Double" />
+                <Row id="2" text="Baris Kedua" />
+                <Row id="3" text="Baris Ketiga" />
             </tbody>
         </table>
     )
-}
+}   
