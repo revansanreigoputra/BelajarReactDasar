@@ -1,16 +1,10 @@
 export default function Todo({text, isCompleted, isDeleted=false}) {
     if(isDeleted) {
         return null;
-    }else if (isCompleted) {
+    }else {
         return (
             <li>
-                <del>{text}</del>
-            </li>
-        )
-    } else {
-        return (
-            <li>
-                {text}
+                {isCompleted ? <del>{text}</del> : text}
             </li>
         )
     }
