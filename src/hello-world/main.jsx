@@ -6,6 +6,8 @@ import TodoList from "../todolist/TodoList.jsx";
 import Table from "../table/Table.jsx";
 import AlertButton from "../button/AlertButton.jsx";
 import MyButton from "../button/MyButton.jsx";
+import Toolbar from "../button/Toolbar.jsx";
+import SearchForm from "../form/SearchForm.jsx";
 
 createRoot(document.getElementById("root"))
     .render(
@@ -20,6 +22,14 @@ createRoot(document.getElementById("root"))
 
                 <MyButton text="Smash me!" onSmash={() => { alert("Smash Clicked!") }}/>
                 <MyButton text="Smash you!" onSmash={() => { alert("Smash You Clicked!") }}/>
+
+
+                <Toolbar onClick={(e) => {
+                    e.stopPropagation();
+                    alert("Toolbar Clicked!");
+                }}/>
+
+                <SearchForm />
             </Container>
         </StrictMode>
     );

@@ -1,4 +1,4 @@
-import "../hello-world/HelloWorld.css";
+// import "../hello-world/HelloWorld.css";
 
 export default function MyButton({text, onSmash}) {
     return (

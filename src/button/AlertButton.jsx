@@ -1,7 +1,8 @@
-import "../hello-world/HelloWorld.css";
+// import "../hello-world/HelloWorld.css";
 
 export default function AlertButton({text, message}) {
-    function handleClick() {
+    function handleClick(e) {
+        console.info(e.target);
         alert(message);
     }
 
