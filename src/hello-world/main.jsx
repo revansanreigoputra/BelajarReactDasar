@@ -36,6 +36,7 @@ createRoot(document.getElementById("root"))
                 <SayHelloForm />
 
                 <Counter />
+                <Counter />
             </Container>
         </StrictMode>
     );
