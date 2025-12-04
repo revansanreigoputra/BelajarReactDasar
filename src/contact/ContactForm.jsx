@@ -1,5 +1,5 @@
-import { useState } from "react";
 import "./ContactForm.css";
+import { useImmer } from "use-immer";
 
 const intialData = {
     name: "",
@@ -7,18 +7,18 @@ const intialData = {
 }
 
 export default function ContactForm() {
-    const [contact, setContact] = useState(intialData);
+    const [contact, setContact] = useImmer(intialData);
 
     function handleNameChange(e) {
-        setContact({
-            name: e.target.value,
-            message: contact.message
+        setContact(draft => {
+            draft.name = e.target.value;
         });
     }
 
-    // Spread Syntax
     function handleMessageChange(e) {
-        setContact({...contact, message: e.target.value});
+        setContact(draft => {
+            draft.message = e.target.value;
+        });
     }
 
     return (
