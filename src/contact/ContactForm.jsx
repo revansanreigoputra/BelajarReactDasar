@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "./ContactForm.css";
 
 const intialData = {
     name: "",
@@ -21,16 +22,19 @@ export default function ContactForm() {
     }
 
     return (
-        <div>
-            <h1>Contact Form</h1>      
-            <form>
-                <input type="text" placeholder="Name" value={contact.name} onChange={handleNameChange} />
-                <br />
-                <input type="text" placeholder="Messege" value={contact.message} onChange={handleMessageChange} />
-            </form>
-            <h1>Contact Detail</h1>
-            <p>Name : {contact.name}</p>
-            <p>Message : {contact.message}</p>
+        <div className="contact-container">
+            <div className="contact-form">
+                <h1>Contact Form</h1>
+                <form>
+                    <input type="text" placeholder="Name" value={contact.name} onChange={handleNameChange} />
+                    <input type="text" placeholder="Message" value={contact.message} onChange={handleMessageChange} />
+                </form>
+            </div>
+            <div className="contact-details">
+                <h1>Contact Detail</h1>
+                <p>Name : {contact.name}</p>
+                <p>Message : {contact.message}</p>
+            </div>
         </div>
     )
 
