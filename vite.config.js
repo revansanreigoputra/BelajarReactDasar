@@ -10,7 +10,8 @@ export default defineConfig({
         index: 'index.html',
         helloWorld: 'hello-world.html',
         contact: 'contact.html',
-        task: 'task.html'
+        task: 'task.html',
+        counter: 'counter.html'
       }
     }
   }
