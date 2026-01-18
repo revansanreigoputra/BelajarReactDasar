@@ -3,10 +3,19 @@ import Product from "./Product";
 
 export default function ProductList() {
     const [products, setProducts] = useState([]);
-    const loaded = useRef(false);
+    const [load, setLoad] = useState(false);
+
+    function handleClick() {
+        console.info('Load Products Button Clicked');
+        setLoad(true);
+    }
 
     useEffect(() => {
-        if (loaded.current === false) {
+        console.info('Call Use Effect with empty dependency array[]');
+    }, []);
+
+    useEffect(() => {
+        if (load) {
             fetch("/products.json")
                 .then((response) => response.json())
                 .then((data) => setProducts(data))
@@ -17,11 +26,12 @@ export default function ProductList() {
             console.info("Product List Component Unmunted")
         }
 
-    }, []);
+    }, [load]);
 
     return (
         <div>
             <h1>Product List</h1>
+            <button onClick={handleClick}>Load Products</button>
             {products.map((product) => (
                 <Product key={product.id} product={product} />
             ))}
