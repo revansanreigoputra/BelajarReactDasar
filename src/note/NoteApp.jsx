@@ -8,9 +8,9 @@ let id = 0;
 const initialNotes = [
     {id: id++, text: "Belajar React Dasar", done: true},
     {id: id++, text: "Mengerjakan tugas React Dasar", done: false},
-    {id: id++, text: "Mengerjakan tugas React Dasar", done: false},
-    {id: id++, text: "Mengerjakan tugas React Dasar", done: false},
-    {id: id++, text: "Mengerjakan tugas React Dasar", done: false}
+    {id: id++, text: "Hookss", done: false},
+    {id: id++, text: "Kikks", done: false},
+    {id: id++, text: "MengeUse Dasar", done: false}
 ];
 
 function notesReducer(notes, action) {

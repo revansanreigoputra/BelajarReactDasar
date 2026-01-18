@@ -9,16 +9,18 @@ export default function Note({note}) {
 
     function handleChangeText(e) {
         dispatch({
-            ...note,
             type: "CHANGE_NOTE",
-            text: e.target.value
+            id: note.id,
+            text: e.target.value,
+            done: note.done
         })
     }
 
     function handleChangeDone(e) {
         dispatch({
-            ...note,
             type: "CHANGE_NOTE",
+            id: note.id,
+            text: note.text,
             done: e.target.checked
         })
     }

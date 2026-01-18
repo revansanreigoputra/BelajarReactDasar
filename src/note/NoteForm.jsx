@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
 import { NotesDispatchContext } from "./NoteContext";
 
 export default function NoteForm() {
